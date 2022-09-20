@@ -1,0 +1,203 @@
+// \:root
+  // #{--color-canvas}: $canvas
+  // #{--color-text}: $text
+  // #{--color-action}: $action
+  //
+  // #{--color-info}: mix($text, #006eff, 10%)
+  // #{--color-danger}: mix($text, #ff0045, 10%)
+  //
+  // #{--color-muted}: mix($canvas, $action, 30%)
+  // #{--color-faded}: mix($canvas, $text, 30%)
+  // #{--color-alt}: mix($canvas, $text, 90%)
+
+$primary: #335c9c
+
+@import "bulma/utilities/_all"
+@import "bulma/base/_all"
+@import "bulma/elements/_all"
+@import "bulma/components/_all"
+@import "bulma/grid/_all"
+@import "bulma/layout/_all"
+@import "ember/_System"
+@import "ember/_Typography"
+@import "typography"
+
+body
+  font-family: "Merriweather"
+  color: #242424
+  background-color: #e9e9e9
+  border-top: 2px solid #4b1350
+  .content
+    strong, b, h1, h2, h3, h4, h5, h6, th
+      // font-family: "Merriweather"
+      font-weight: 500
+      color: #252729
+
+@media (prefers-color-scheme: dark)
+  body
+    color: #a5a5a0
+    background-color: #30373b
+    border-top: 2px solid #241126
+    .content
+      strong, b, h1, h2, h3, h4, h5, h6, th
+        color: #939ba2
+    img
+      filter: grayscale(50%)
+
+// .container
+//   max-width: 46rem
+// body.frontpage article.content
+  // max-width: 80%
+  // margin: 0 auto
+
+// Dark mode with CSS | Tom Brow https://tombrow.com/dark-mode-website-css
+@media screen and (min-width: 900px)
+  main
+    font-size: calc(0.8rem + 0.8vw)
+  .container
+    max-width: 80vw
+
+body
+  #colorbar
+    background-image: url(/assets/colorbar.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    height: 2px
+    margin-top: -1px
+  #colorbar+a
+    display: block
+    background-color: #3b3f42
+    padding: 2rem 0 1.5rem 0
+
+body.frontpage #logo
+    background-image: url(/assets/top.jpg)
+    background-position: center center
+    background-size: cover
+    // background-size: 100% 1px
+    // background-size: 56rem auto
+    // background-size: cover
+    padding: 10vh 3em 7em 3em
+    // border-bottom: 3px solid #3776c9
+    min-height: 35vh
+
+    img
+      display: block
+      margin: 0 auto
+      // padding-top: 10vh
+      background-color: hsla(0, 0%, 0%, 0.66)
+      // border: 1px solid black
+      border-radius: 0.7rem
+      padding: .8rem 1.7rem .4rem 1.7rem
+      -webkit-box-shadow: 0 0 1rem 1rem rgba(0,0,0,0.2)
+      -moz-box-shadow: 0 0 1rem 1rem rgba(0,0,0,0.2)
+      box-shadow: 0 0 1rem 1rem rgba(0,0,0,0.2)
+      // max-width: 30rem
+
+main
+  padding: 1em 1.5em 1em 1.5em
+  // font-size: 7rem
+
+.content
+  a
+    color: $primary
+  a:hover
+    color: #2f64ff
+    border-bottom: 1px dashed #348acb
+  aside
+    @extend p
+    p
+      color: #858186
+      text-indent: 2rem
+      // padding-left: 2rem
+      // font-size: $size-4
+      a
+        color: #45688f
+  author
+    display: block
+    color: $grey-dark
+    margin-bottom: 0.8rem
+  code
+    background-color: inherit
+    color: $grey-dark
+  .button
+    font-size: 80%
+
+.content > p
+  text-indent: 2rem
+
+footer
+  margin-top: 3rem
+  padding: 2rem 1rem 2rem 1rem
+  background-color: #051119
+  color: #758F90
+  font-family: "Merriweather Sans"
+  // font-size: 80%
+
+  h2
+    font-weight: bold
+    margin-bottom: 0.5rem
+    font-size: 140%
+    color: #60656a
+
+  a
+    color: #848c92
+    &:visited
+      color: #4b536b
+    &:hover
+      color: #ABC0FF
+    &::before
+      content: "· "
+
+.button
+  background-color: #60656a
+  border: 0
+
+  &:hover
+    color: #ABC0FF
+    background-color: #7d868e
+
+.content blockquote
+  display: block
+  background-color: transparent
+  border: 0
+  padding: 1.5em 2em 0.5em 4em
+  // margin: 1.5rem 0
+  position: relative
+
+  &:before
+    content: '\201C'
+    left: 0
+    top: 0
+    position: absolute
+    // transform: translate(-50%, -80%)
+    width: 1.3em
+    height: 2em
+    font-size: calc(2em + 3vw)
+    color: #666
+    text-align: center
+
+  &>p:last-child>em:only-child
+    display: block
+    text-align: right
+    font-size: 90%
+    color: $grey-dark
+    &:before
+      content: "\2013\00A0"
+
+p > a
+  // border-bottom: 1px dashed #6b69de
+  // catches [link](url "title ...") for <read more> buttons
+  &[title$="..."]
+    @extend .button
+
+#home
+  display: block
+  padding: 0.4em 1em 0.5em 1em
+  background-color: #190509
+  margin-bottom: 3rem
+
+  h1
+    // font-size: 200%
+    font-weight: normal
+    margin: 0.3em 0em 0.4em 0em

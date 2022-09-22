@@ -66,6 +66,8 @@ export default defineConfig({
         if (/^https\:\/\/truthonly\.com\/.*\/$/.test(item.url)) {
           // ends with slash, but must end in .html
           item.url = item.url.substr(0, item.url.length - 1) + ".html";
+        } else if (item.url === "https://truthonly.com/") {
+          // don't do anything to the root
         } else {
           item.url += ".html";
         }

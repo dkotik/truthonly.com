@@ -66,7 +66,11 @@ export default defineConfig({
         if (/^https\:\/\/truthonly\.com\/.*\/$/.test(item.url)) {
           // ends with slash, but must end in .html
           item.url = item.url.substr(0, item.url.length - 1) + ".html";
-        } // console.log(item.url);
+        } else {
+          item.url += ".html";
+        }
+
+        // console.log(item.url);
 
         return item;
       },

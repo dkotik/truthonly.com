@@ -1,4 +1,11 @@
-# Truthonly.com Website
+# Truthonly.com Website TODO
+
+- [ ] Upgrade to Astro 3.0
+- [ ] Add [scroll progress](https://twitter.com/jh3yy/status/1664380461110493185?s=09&t=nZNpglpGEoAd2eNE1VNGQQ)
+- [ ] Hire designers to make a skin
+- [ ] Host on Cloudflare with functions interface: https://taras.glek.net/post/cloudflare-pages-kind-of-amazing/?utm_source=pocket_saves
+- [ ] switch over to https://andybrewer.github.io/mvp/?utm_source=pocket_saves
+- [ ] consider https://www.matuzo.at/blog/html-boilerplate/?utm_source=pocket_saves
 
 # https://every-layout.dev/ || https://grid.layoutit.com/
 

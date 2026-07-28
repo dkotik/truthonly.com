@@ -11,7 +11,7 @@ const locale = /^\/en\//.test(Astro.url.pathname)
     ? "en" : /^\/ru\//.test(Astro.url.pathname) ? "ru" : "ua";
 i18next.changeLanguage(locale);
 ---
-<html>
+<html lang={locale}>
   <head>
     <HeadMeta
         title={Astro.props.title}
@@ -24,7 +24,7 @@ i18next.changeLanguage(locale);
       { Astro.props.class === "frontpage"
           ?
             <div id="logo">
-              <img src="/assets/logo.svg" />
+              <img src="/assets/logo.svg" alt="Truthonly logo." />
             </div>
             <div style="float: right; margin: 0 1em 1em 1em">
             </div>

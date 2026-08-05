@@ -6,8 +6,8 @@ import Error from "@components/markdown/error.mdx";
 import { getCollection, getEntry, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('articles', ({id}) => {
-    return id.match(/^en\//)
+  const posts = await getCollection('articles', ({id, data}) => {
+    return id.match(/^en\//) && data.draft != true
   });
   return posts.map(post => {
     // post.data.slug ? post.data.slug :

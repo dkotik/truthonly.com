@@ -36,7 +36,11 @@ export default defineConfig({
         // cleanParam: "ref /articles/",
         disallow: ["/assets/"]
       }
-    ]
+    ],
+    sitemap: [
+      'https://truthonly.com/sitemap-index.xml',
+    ],
+    // Sitemap: https://<YOUR SITE>/sitemap-index.xml
   }), //   compress: true,
   //   preloadFonts: true,
   //   inlineFonts: false,
@@ -75,26 +79,20 @@ export default defineConfig({
       } else {
         item.url += ".html";
       }
-
-      // console.log(item.url);
-
       return item;
     },
 
     i18n: {
-      entryLimit: 10000,
-      changefreq: "weekly",
-      priority: 0.7,
-      // lastmod: new Date("2022-02-24"),
-      defaultLocale: "uk",
-      // All urls that don't contain `es` or `fr` after `site` will be treated as default locale, i.e. `en`
+      defaultLocale: 'en', // All urls that don't contain `es` or `fr` after `https://example.com/` will be treated as default locale, i.e. `en`
       locales: {
         ua: "uk-UA",
         ru: "ru-RU",
         en: "en-US"
-        // The `defaultLocale` value must present in `locales` keys
-      }
+      },
     }
+    //   entryLimit: 10000,
+    //   changefreq: "weekly",
+    //   priority: 0.7,
   }), mdx(), svelte()]
 });
 

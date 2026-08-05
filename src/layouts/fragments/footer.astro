@@ -1,10 +1,11 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection, getEntry, CollectionEntry } from 'astro:content';
+import type { ArticleSchema } from '../../content.config.ts'; // Adjust path as needed
 
-const articles = await getCollection(
+const articles: CollectionEntry<'article'>[] = await getCollection(
   "articles",
-  ({ data }) => {
-    return !data.draft
+  (article: CollectionEntry<'article'>) => {
+    return !article.data.draft
   }
 );
 ---

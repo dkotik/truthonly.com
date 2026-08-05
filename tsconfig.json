@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    // disables
+    // "noImplicitAny": true,
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
     "module": "es2015",
@@ -11,14 +13,15 @@
     "isolatedModules": true,
     // Add type definitions for our Astro runtime.
     "types": ["astro/client"],
-    "baseUrl": ".",
+    // "baseUrl": ".", // deprecated
     "paths": {
-      "@content/*": ["src/content/*"],
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@assets/*": ["src/assets/*"]
+      "@content/*": ["./src/content/*"],
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@assets/*": ["./src/assets/*"]
     },
     "strictNullChecks": true,
-    "allowJs": true
+    "allowJs": true,
+    "noEmit": true
   },
 }

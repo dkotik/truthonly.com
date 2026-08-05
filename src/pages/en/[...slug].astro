@@ -3,13 +3,16 @@ import DefaultLayout from "@layouts/default.astro";
 import Image from "@components/markdown/img.mdx";
 import YouTubeVideoMDX from "@components/markdown/video.mdx";
 import Error from "@components/markdown/error.mdx";
-import { getCollection, getEntry, render } from 'astro:content';
+import { getCollection, getEntry, render, CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('articles', ({id, data}) => {
-    return id.match(/^en\//) && data.draft != true
-  });
-  return posts.map(post => {
+  const posts: CollectionEntry<'article'>[] = await getCollection(
+    'articles',
+    (article: CollectionEntry<'article'>) => {
+      return article.id.match(/^en\//) && article.data.draft != true
+    }
+  );
+  return posts.map((post: CollectionEntry<'article'>) => {
     // post.data.slug ? post.data.slug :
     const slug = post.filePath
       .replace(/^src\/content\/en\//, "")
@@ -24,9 +27,12 @@ export async function getStaticPaths() {
   });
 }
 
+interface Props {
+  post: CollectionEntry<'article'>
+}
 
 // const { slug } = Astro.params;
-const { post, path } = Astro.props;
+const { post } = Astro.props;
 const { Content } = await render(post);
 
 const matchYoutubeLink = /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/

@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/dkotik
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://truthonly.com
+  * I am dkotik (https://keybase.io/dkotik) on keybase.
+  * I have a public key with fingerprint 521A A18F D5B6 2283 F059  D8CB E736 B148 1C37 82D2
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101f891306bc51f4121ec8a475d0b319f581d656bc77a3274847031a286ce4e51b00a",
+      "fingerprint": "521aa18fd5b62283f059d8cbe736b1481c3782d2",
+      "host": "keybase.io",
+      "key_id": "e736b1481c3782d2",
+      "kid": "0101f891306bc51f4121ec8a475d0b319f581d656bc77a3274847031a286ce4e51b00a",
+      "uid": "bc0c29168617ff7a99f4b32f77095c19",
+      "username": "dkotik"
+    },
+    "service": {
+      "hostname": "truthonly.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1508834439,
+  "expire_in": 157680000,
+  "prev": "938cc9cd789f636ee36c22e62f190ebba2dc7bac78edf154cde86b1ddf780c5d",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMIlAnicrVJbSBRRGF7LrLaiJbKnjJqCtFaZM7dzZiGIpKCCsAzNLm4z56LjbjPb
+7Ky6mEl08fKQFohY9JA9SYI9FCX1UGGIqEFgEWVFYVZEF4oQyaQzUm89dl4O5/8u
+5/t//v4lcwPBjMNTzW36+NSxjKF7HalA2efpxjrBdEhaiNQJMTp70TihSS8as4gQ
+EUQgAoZ0IIuaiVXAFCABipGhQJWIpgx0piJANJWjEBqyBBWkQFEGhoQ0TBWqAlMU
+DSEsMMuuoG7CtWyP26oSMAyAGFFNTZKQzERVJwibFMqaCRQEsAyRRCQurHSSvoKH
+M40kLbAcXuOP6Gy8f/D/c+7UrJ2JRSzpQEMagIxBQ9eZYsoSg1DUVQx0n5ikrm0c
+oZxNYo5nxYT6sMBr1Ram/lj9Pv7gnpvyKh07ni7AzhEuTbiO52AnzqFKz0skI77U
+Syd8bg01o39coqZlEz5GrqimbtJybCECOBN7lm8LVBEhWVFkPSzQ2oTl0qjlM1So
+IZEf/x9azS11GWGsYwKRzjRZo1TWsCRRTWJAF6lpGhLB0DQwRJQwoCqYUMSnTAiD
+SMQqEfy+jtoO94Y8p1HBPZNWhW14KZcK9ffvHswMZAQDWfPm+PsVCC4M/d264cXz
+Z9bkMlCe11MUnfxWtzOevl1W/HjjhrPjmbl9VjdceqcseHOgoOn1iDmGI7W7cjdb
+Jy+/r1q3f0Oo4V2w6CkrXdBQNal3NNegU1nP734Z2/buW8/28J6v32co0J6Nfnx/
+I1Kec/7Xvs5FXcqVAnnZlkNrn28fsWOfFq7eFssfCu14YahvHl49fRtnjy+aGCB5
+yZUlF3N6Jvoar60/nt1i/XzVuXewsbvk8IORF1WFra1ssr20/0PphUvDH3sfnfsa
+0gobJ7pGD6TC0/j60JkT896kbw1uijdkv/xyfyDUYj3Mf1KTUfLj7aqAs2KrPnKi
+d3fTQGj51vYmd6x0uK2vebh49Dd/YkUu
+=hD99
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dkotik
+
+==================================================================

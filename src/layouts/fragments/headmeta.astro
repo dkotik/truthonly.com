@@ -2,16 +2,7 @@
 import { t } from "i18next";
 import { SEO } from "astro-seo"; // https://github.com/jonasmerlin/astro-seo
 import { HeadHrefLangs } from "astro-i18next/components";
-
-import { getImage } from "@astrojs/image";
-const { src: cardImage } = await getImage({
-    src: import("./share.png"),
-    width: 225,
-    height: 225,
-    // aspectRatio: 16/9,
-    format: "jpg"
-});
-
+import cardImage from "./share.png"
 const title = Astro.props.title
     ? "TO: " + Astro.props.title
     : "Truthonly.com";
@@ -22,7 +13,7 @@ const title = Astro.props.title
 <meta charset="utf-8">
 <meta name="color-scheme" content="dark" />
 <SEO
-  title={ title } // browser tab
+  title={ title }
   description={ Astro.props.description || t("description") }
   openGraph={{
     basic: {

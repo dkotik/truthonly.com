@@ -8,7 +8,7 @@ import Footer from "./fragments/footer.astro";
 import '../styles/style.sass';
 
 const locale = /^\/en\//.test(Astro.url.pathname)
-    ? "en" : /^\/ru\//.test(Astro.url.pathname) ? "ru" : "ua";
+    ? "en" : /^\/ru\//.test(Astro.url.pathname) ? "ru" : "uk";
 i18next.changeLanguage(locale);
 ---
 <html lang={locale}>

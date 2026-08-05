@@ -1,0 +1,17 @@
+
+export default new Map([
+["src/content/en/contact.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fcontact.mdx&astroContentModuleFlag=true")],
+["src/content/en/history/2015/palimpsests.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fhistory%2F2015%2Fpalimpsests.mdx&astroContentModuleFlag=true")],
+["src/content/en/history/2016/historical-method.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fhistory%2F2016%2Fhistorical-method.mdx&astroContentModuleFlag=true")],
+["src/content/en/history/2017/arabic-golden-age.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fhistory%2F2017%2Farabic-golden-age.mdx&astroContentModuleFlag=true")],
+["src/content/en/history/2017/reformation.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fhistory%2F2017%2Freformation.mdx&astroContentModuleFlag=true")],
+["src/content/en/philosophy/2016/bible-impressed-me.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fphilosophy%2F2016%2Fbible-impressed-me.mdx&astroContentModuleFlag=true")],
+["src/content/en/philosophy/2016/dwarf-fortress-materialism.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fphilosophy%2F2016%2Fdwarf-fortress-materialism.mdx&astroContentModuleFlag=true")],
+["src/content/en/philosophy/2017/rna-energy.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fphilosophy%2F2017%2Frna-energy.mdx&astroContentModuleFlag=true")],
+["src/content/en/society/2015/markets-progress.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fsociety%2F2015%2Fmarkets-progress.mdx&astroContentModuleFlag=true")],
+["src/content/en/society/2015/useful-idiot.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fsociety%2F2015%2Fuseful-idiot.mdx&astroContentModuleFlag=true")],
+["src/content/en/society/2017/immigration.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fsociety%2F2017%2Fimmigration.mdx&astroContentModuleFlag=true")],
+["src/content/en/society/2019/my-socialism.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fen%2Fsociety%2F2019%2Fmy-socialism.mdx&astroContentModuleFlag=true")],
+["src/content/index.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Findex.mdx&astroContentModuleFlag=true")],
+["src/content/ru/contact.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fru%2Fcontact.mdx&astroContentModuleFlag=true")]]);
+		

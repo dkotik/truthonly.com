@@ -1,0 +1,11 @@
+{{ define `hero` }}
+<div id="logo">
+  {{/* Logo font: Hermit Bold */}}
+  <img alt="logo" src="{{ .rootpath }}static/img/logo.svg" />
+</div>
+<div id="colorbar"></div>
+{{ end }}
+
+{{ define `main` }}
+<article class="content">{{ .content }}</article>
+{{ end }}

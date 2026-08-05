@@ -1,0 +1,74 @@
+---
+import { getCollection, getEntry, CollectionEntry } from 'astro:content';
+import type { ArticleSchema } from '../../content.config.ts'; // Adjust path as needed
+
+const articles: CollectionEntry<'article'>[] = await getCollection(
+  "articles",
+  (article: CollectionEntry<'article'>) => {
+    return !article.data.draft
+  }
+);
+---
+
+<nav>
+
+<div>
+    <h2>History</h2>
+    <ul>
+    {
+        articles.filter(article => article.filePath.match(/^src\/content\/en\/history\//))
+            .map(article =>
+                <li>
+                    <a href={"/en/history/" + article.filePath.replace(/^src\/content\/en\/history\//, "").replace(/\.mdx$/, ".html")}>
+                        { article.data.title }
+                    </a>
+                </li>
+            )
+    }
+    </ul>
+</div>
+
+<div>
+<h2>Philosophy</h2>
+<ul>
+{
+    articles.filter(article => article.filePath.match(/^src\/content\/en\/philosophy\//))
+        .map(article =>
+            <li>
+                <a href={"/en/philosophy/" + article.filePath.replace(/^src\/content\/en\/philosophy\//, "").replace(/\.mdx$/, ".html")}>
+                    { article.data.title }
+                </a>
+            </li>
+        )
+}
+</ul>
+</div>
+
+<div>
+<h2>Society</h2>
+<ul>
+{
+    articles.filter(article => article.filePath.match(/^src\/content\/en\/society\//))
+        .map(article =>
+            <li>
+                <a href={"/en/society/" + article.filePath.replace(/^src\/content\/en\/society\//, "").replace(/\.mdx$/, ".html")}>
+                    { article.data.title }
+                </a>
+            </li>
+        )
+}
+</ul>
+</div>
+
+</nav>
+
+<style>
+nav {
+    display: grid;
+    max-width: 60em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    margin: 0 auto;
+}
+</style>

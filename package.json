@@ -1,0 +1,27 @@
+{
+  "name": "truthonly.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && rm -rf dist/ru.html",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/svelte": "^9.0.1",
+    "astro": "^7.1.6",
+    "astro-i18next": "^1.0.0-beta.21",
+    "astro-robots-txt": "^1.0.0",
+    "astro-seo": "^1.1.0",
+    "fast-xml-parser": "^4.0.10",
+    "sass": "^1.54.9",
+    "svelte": "^5.56.8",
+    "svelte-i18next": "^1.2.2"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.5",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,55 @@
+---
+import DefaultLayout from "@layouts/default.astro";
+import Image from "@components/markdown/img.mdx";
+import YouTubeVideoMDX from "@components/markdown/video.mdx";
+import Error from "@components/markdown/error.mdx";
+import { getCollection, getEntry, render, CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts: CollectionEntry<'article'>[] = await getCollection(
+    'articles',
+    (article: CollectionEntry<'article'>) => {
+      return article.id.match(/^en\//) && article.data.draft != true
+    }
+  );
+  return posts.map((post: CollectionEntry<'article'>) => {
+    // post.data.slug ? post.data.slug :
+    const slug = post.filePath
+      .replace(/^src\/content\/en\//, "")
+      .replace(/\.mdx$/, "");
+    return {
+      params: { slug },
+      props: {
+        post,
+        path: "en/" + slug.replace(/[^\\\/]+$/, "")
+      },
+    }
+  });
+}
+
+interface Props {
+  post: CollectionEntry<'article'>
+}
+
+// const { slug } = Astro.params;
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const matchYoutubeLink = /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/
+
+---
+<DefaultLayout
+    title={post.data.title}
+    description={post.data.description}
+    class={post.data.class}
+>
+    <h1 class="title">{post.data.title}</h1>
+    <Content />
+</DefaultLayout>
+
+<style>
+:global(figure) {
+    max-width: 25em;
+    margin: 0 auto !important;
+}
+</style>

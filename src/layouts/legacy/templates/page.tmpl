@@ -1,0 +1,73 @@
+{{ with merge (data `static/templates/defaults.yaml`) . }}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en">
+<head>
+  <title>{{ .title }}</title>
+  <meta name="title" content="{{ .title }}" />
+  <meta name="description" content="{{ .description }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="{{ .keywords }}" />
+  <meta property="og:image" content="https://{{ .request.Host }}{{ .rootpath }}{{ .badge }}" />
+  <!-- You must include og width & height, so that url always has an icon! -->
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="fb:app_id" content="966242223397117" />
+  <meta property="og:description" content="{{ .description }}" />
+  <meta property="og:url" content="https://{{ .request.Host }}{{ .request.URL }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ .title }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ .title }}" />
+  <meta name="twitter:description" content="{{ .description }}" />
+  <meta name="twitter:image" content="{{ .rootpath }}{{ .badge }}" />
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ .rootpath }}static/style.css" />
+  <link rel="image_src" href="{{ .rootpath }}{{ .badge }}" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <script type="text/javascript">/* Firefox FOUC fixer! */</script>
+
+  {{ block `head` . }}
+  {{ end }}
+</head>
+<body class="{{ .class }}">
+  {{ block `hero` . }}
+    <div id="colorbar"></div>
+    <a alt="Home" title="Home" class="container content" href="{{ .rootpath }}"><p><img alt="logo" src="{{ .rootpath }}static/img/logo.svg" /></p></a>
+  {{ end }}
+<main class="container">
+{{ block `main` . }}
+  <section class="content">
+    {{- .content -}}
+  </section>
+{{ end }}
+</main>
+<footer>
+  <section class="container">
+    {{ block `footer` . }}
+    {{ $rootpath := .rootpath }}
+    {{ with (data `pinned.yaml`).en }}
+    <nav class="columns is-centered is-variable is-8">
+      <div class="column is-narrow">
+        <h2>Philosophy</h2>
+        <ul>{{ range .philosophy }}
+          <li><a href="{{ $rootpath }}{{ .url }}" alt="{{ .title }}">{{ .title }}</a></li>
+        {{ end }}</ul>
+      </div>
+      <div class="column is-narrow">
+        <h2>History</h2>
+        <ul>{{ range .history }}
+          <li><a href="{{ $rootpath }}{{ .url }}" alt="{{ .title }}">{{ .title }}</a></li>
+        {{ end }}</ul>
+      </div>
+      <div class="column is-narrow">
+        <h2>Society</h2>
+        <ul>{{ range .society }}
+          <li><a href="{{ $rootpath }}{{ .url }}" alt="{{ .title }}">{{ .title }}</a></li>
+        {{ end }}</ul>
+      </div>
+    </nav>
+    {{ end }}
+    {{ end }}
+  </section>
+</footer>
+</body></html>
+{{ end }}

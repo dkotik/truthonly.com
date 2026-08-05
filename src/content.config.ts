@@ -11,6 +11,7 @@ import { z } from 'astro/zod';
 const articles = defineCollection({
   loader: glob({ base: './src/content', pattern: '**/*.{md,mdx}' }),
   schema: z.object({
+    slug: z.string().optional(),
     title: z.string().optional(),
     description: z.string().optional(),
     draft: z.boolean().optional(),

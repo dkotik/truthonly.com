@@ -6,11 +6,14 @@ import Error from "@components/markdown/error.mdx";
 import { getCollection, getEntry, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('articles');
+  const posts = await getCollection('articles', ({id}) => {
+    return id.match(/^src\/content\/en\//)
+  });
   return posts.map(post => {
-        const slug = post.filePath
-          .replace(/^src\/content\/en\//, "")
-          .replace(/\.mdx$/, "");
+    // post.data.slug ? post.data.slug :
+    const slug = post.filePath
+      .replace(/^src\/content\/en\//, "")
+      .replace(/\.mdx$/, "");
     return {
       params: { slug },
       props: {

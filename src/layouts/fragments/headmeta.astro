@@ -2,7 +2,7 @@
 import { t } from "i18next";
 import { SEO } from "astro-seo"; // https://github.com/jonasmerlin/astro-seo
 import { HeadHrefLangs } from "astro-i18next/components";
-import cardImage from "./share.png"
+// import cardImage from "./share.png"
 const title = Astro.props.title
     ? "TO: " + Astro.props.title
     : "Truthonly.com";
@@ -20,7 +20,7 @@ const title = Astro.props.title
     basic: {
         title: title,
         "type": "website",
-        image: cardImage
+        image: "/assets/share.png",
     },
     image: {
         alt: title,
@@ -36,6 +36,18 @@ const title = Astro.props.title
         },
         {
             property: "og:description",
+            content: Astro.props.description || t("description")
+        },
+        {
+            name: "twitter:image",
+            content: "/assets/share.png"
+        },
+        {
+            name: "twitter:title",
+            content: title
+        },
+        {
+            name: "twitter:description",
             content: Astro.props.description || t("description")
         }
       ]

@@ -3,7 +3,8 @@ templates: [/static/templates/page.tmpl, /static/templates/article.tmpl]
 title: Палимпсесты
 description: Понятие “палимпсест” в греческом языке буквально означает “опять соскобленный.”
 alias: en/article/read/79/kolonka-redaktora/palimpsesty.html
-keywords: palimpsesty
+keywords:
+  - palimpsesty
 author: Hector Salamanca
 date: 24 Apr 2015
 ---

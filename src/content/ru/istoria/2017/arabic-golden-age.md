@@ -4,7 +4,9 @@ title: Зарождение Золотого Века Ислама
 description: Быстрые завоевания впечатляют. Ещё больше впечатляет, когда на месте
   завоёванной цивилизации строится ещё более величественная цивилизация.
 alias: ru/article/read/268/kolonka-redaktora/zarozhdenie-zolotogo-veka-islama.html
-keywords: zarozhdenie zolotogo veka islama
+keywords:
+  - zarozhdenie
+  - zolotogo veka islama
 author: Dima Kotik
 date: 29 Nov 2017
 ---

@@ -3,7 +3,8 @@ templates: [/static/templates/page.tmpl, /static/templates/article.tmpl]
 title: Как всё это началось
 description: Очерк о начале реформации.
 alias: ru/article/read/266/kolonka-redaktora/kak-vse-eto-nachalos.html
-keywords: kak vse eto nachalos
+keywords:
+  - kak vse eto nachalos
 author: Dima Kotik
 date: 23 Oct 2017
 ---

@@ -14,6 +14,7 @@ const articles = defineCollection({
       slug: z.string().optional(),
       title: z.string().optional(),
       description: z.string().optional(),
+      keywords: z.array(z.string()).optional(),
       draft: z.boolean().optional(),
       // pubDate: z.coerce.date(),
       // updatedDate: z.coerce.date().optional(),

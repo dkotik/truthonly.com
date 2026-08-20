@@ -11,6 +11,12 @@
     "description": {
       "type": "string"
     },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "draft": {
       "type": "boolean"
     },

@@ -13,7 +13,7 @@ const articles = defineCollection({
   schema: z.object({
       slug: z.string().optional(),
       title: z.string().optional(),
-      description: z.string().optional(),
+      description: z.string().max(125).optional(),
       keywords: z.array(z.string()).optional(),
       draft: z.boolean().optional(),
       // pubDate: z.coerce.date(),

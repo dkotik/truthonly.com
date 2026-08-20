@@ -9,7 +9,8 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 125
     },
     "keywords": {
       "type": "array",

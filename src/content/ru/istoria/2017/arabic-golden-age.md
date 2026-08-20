@@ -1,8 +1,7 @@
 ---
 templates: [/static/templates/page.tmpl, /static/templates/article.tmpl]
 title: Зарождение Золотого Века Ислама
-description: Быстрые завоевания впечатляют. Ещё больше впечатляет, когда на месте
-  завоёванной цивилизации строится ещё более величественная цивилизация.
+description: Быстрые завоевания впечатляют. Ещё больше впечатляет, когда на месте завоёванной цивилизации строится более величественная.
 alias: ru/article/read/268/kolonka-redaktora/zarozhdenie-zolotogo-veka-islama.html
 keywords:
   - zarozhdenie

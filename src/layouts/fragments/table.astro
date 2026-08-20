@@ -1,0 +1,17 @@
+---
+const { caption } = Astro.props;
+---
+<div class="table-container">
+  <slot />
+  {caption && <p class="table-caption">{caption}</p>}
+</div>
+
+<style>
+  .table-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+    font-size: 80%;
+  }
+</style>

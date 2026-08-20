@@ -1,8 +1,8 @@
 ---
-import { localizePath } from "astro-i18next";
+// import { localizePath } from "astro-i18next";
 import i18next, { t } from "i18next";
 import Navigation from "./fragments/navigation.astro";
-import Language from "./fragments/language.astro";
+// import Language from "./fragments/language.astro";
 import HeadMeta from "./fragments/headmeta.astro";
 import Footer from "./fragments/footer.astro";
 import '../styles/style.sass';
@@ -20,22 +20,23 @@ i18next.changeLanguage(locale);
     />
   </head>
   <body class={Astro.props.class || "page"}>
-    <slot name="hero">
-      { Astro.props.class === "frontpage"
-          ?
-            <div id="logo">
-              <img src="/assets/logo.svg" alt="Truthonly logo." />
-            </div>
-            <div style="float: right; margin: 0 1em 1em 1em">
-            </div>
-            <div id="colorbar" />
-            // <Language />
-          :
-            <div id="colorbar" />
-            <Navigation />
-      }
-
-    </slot>
+    <header>
+      <slot name="hero">
+        { Astro.props.class === "frontpage"
+            ?
+              <div id="logo">
+                <img src="/assets/logo.svg" alt="Truthonly logo." />
+              </div>
+              <div style="float: right; margin: 0 1em 1em 1em">
+              </div>
+              <div id="colorbar" />
+              // <Language />
+            :
+              <div id="colorbar" />
+              <Navigation />
+        }
+      </slot>
+    </header>
     <main class="container">
         <section class="content">
           <slot />

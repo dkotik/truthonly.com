@@ -18,37 +18,38 @@ const title = Astro.props.title
   description={ Astro.props.description || t("description") }
   openGraph={{
     basic: {
-        title: title,
-        "type": "website",
-        image: "/assets/share.png",
+      title: title,
+      "type": "website",
+      image: "/assets/share.png",
     },
     image: {
-        alt: title,
-        height: 225,
-        width: 255
+      url: "/assets/og.jpg",
+      width: 1200,
+      height: 630,
+      alt: title
     }
   }}
   extend={{
       meta: [
         {
-            name: "keywords",
-            content: Astro.props.keywords?.join(", ")
+          name: "keywords",
+          content: Astro.props.keywords?.join(", ")
         },
         {
-            property: "og:description",
-            content: Astro.props.description || t("description")
+          property: "og:description",
+          content: Astro.props.description || t("description")
         },
         {
-            name: "twitter:image",
-            content: "/assets/share.png"
+          name: "twitter:image",
+          content: "/assets/share.png"
         },
         {
-            name: "twitter:title",
-            content: title
+          name: "twitter:title",
+          content: title
         },
         {
-            name: "twitter:description",
-            content: Astro.props.description || t("description")
+          name: "twitter:description",
+          content: Astro.props.description || t("description")
         }
       ]
   }} />

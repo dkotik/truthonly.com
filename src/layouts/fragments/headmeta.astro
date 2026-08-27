@@ -1,64 +1,42 @@
 ---
 import { t } from "i18next";
-import { SEO } from "astro-seo"; // https://github.com/jonasmerlin/astro-seo
+// import { SEO } from "astro-seo"; // https://github.com/jonasmerlin/astro-seo
 import { HeadHrefLangs } from "astro-i18next/components";
 // import cardImage from "./share.png"
 const title = Astro.props.title
     ? "TO: " + Astro.props.title
     : "Truthonly.com";
+
+const description = Astro.props.description || t("description")
 ---
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="dark" />
-<link rel="sitemap" href="/sitemap-index.xml" />
-<SEO
-  title={ title }
-  description={ Astro.props.description || t("description") }
-  openGraph={{
-    basic: {
-      title: title,
-      "type": "website",
-      image: "/assets/share.png",
-    },
-    image: {
-      url: "/assets/og.jpg",
-      width: 1200,
-      height: 630,
-      alt: title
-    }
-  }}
-  extend={{
-      meta: [
-        {
-          name: "keywords",
-          content: Astro.props.keywords?.join(", ")
-        },
-        {
-          property: "og:description",
-          content: Astro.props.description || t("description")
-        },
-        {
-          name: "twitter:image",
-          content: "/assets/og.jpg"
-        },
-        {
-          name: "twitter:image:width",
-          content: "1200"
-        },
-        {
-          name: "twitter:image:height",
-          content: "630"
-        },
-        {
-          name: "twitter:title",
-          content: title
-        },
-        {
-          name: "twitter:description",
-          content: Astro.props.description || t("description")
-        }
-      ]
-  }} />
+<title>{ title }</title>
+<meta name="title" content={ title } />
+<meta name="description" content={ description } />
+<meta name="keywords" content={Astro.props.keywords?.join(", ")} />
+<link rel="image_src" href="/assets/share.png" />
+<meta property="og:image" content="/assets/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Truth is discovered." />
+<!-- <meta property="fb:app_id" content="966242223397117" name="fb:app_id" /> -->
+<meta property="og:description" content={ description } />
+<meta property="og:url" content="https://truthonly.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={ title } />
+<meta name="twitter:site" content="@dkotik">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={ title } />
+<meta name="twitter:description" content={ description } />
+<meta name="twitter:image" content="/assets/og.jpg" />
+<meta name="twitter:image:width" content="1200" />
+<meta name="twitter:image:height" content="630" />
+<meta name="twitter:image:alt" content="Truth is discovered." />
+
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="canonical" href={ "https://truthonly.com"+Astro.url.pathname }>

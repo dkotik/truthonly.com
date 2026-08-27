@@ -1,7 +1,7 @@
 ---
 import DefaultLayout from "@layouts/default.astro";
 import { getCollection, getEntry, render } from 'astro:content';
-import Content, {frontmatter} from "@content/index.mdx";
+import {frontmatter} from "@content/index.mdx";
 
 const page = await getEntry('articles', 'index');
 const { Content } = await render(page);

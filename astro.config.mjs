@@ -16,7 +16,6 @@ export default defineConfig({
   site: "https://truthonly.com",
   // base: '/docs',
   // outDir: target,
-  publicDir: "src/public",
   // trailingSlash: "never",
   server: {
     port: 8081

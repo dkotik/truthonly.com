@@ -8,6 +8,7 @@ const title = Astro.props.title
     : "Truthonly.com";
 
 const description = Astro.props.description || t("description")
+const canonicalURL = Astro.site+Astro.url.pathname.replace(/^\/+/, '')
 ---
 
 <meta charset="utf-8">
@@ -22,11 +23,12 @@ const description = Astro.props.description || t("description")
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Truth is discovered." />
-<!-- <meta property="fb:app_id" content="966242223397117" property="fb:app_id" /> -->
+<!-- <meta content="966242223397117" property="fb:app_id" /> -->
 <meta property="og:description" content={ description } />
-<meta property="og:url" content={ Astro.site } />
+<meta property="og:url" content={ canonicalURL } />
 <meta property="og:type" content="website" />
 <meta property="og:title" content={ title } />
+<meta name="twitter:url" content={ canonicalURL }>
 <meta name="twitter:site" content="@dkotik">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={ title } />
@@ -42,4 +44,4 @@ const description = Astro.props.description || t("description")
 <link rel="manifest" href="/site.webmanifest">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="canonical" href={ Astro.site+Astro.url.pathname.replace(/^\/+/, '') }>
+<link rel="canonical" href={ canonicalURL }>

@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /assets/
 Allow: /
 Crawl-delay: 10
 Sitemap: https://truthonly.com/sitemap-index.xml

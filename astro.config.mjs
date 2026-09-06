@@ -33,9 +33,9 @@ export default defineConfig({
         {
           userAgent: "*",
           allow: "/",
-          crawlDelay: 10,
+          crawlDelay: 10
           // cleanParam: "ref /articles/",
-          disallow: ["/assets/"]
+          // disallow: ["/assets/"] // blocks icons
         }
       ],
       sitemap: [
